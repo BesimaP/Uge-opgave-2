@@ -1,6 +1,1 @@
-void main(){
-
-
-
-
-}
+# Uge opgave 2
