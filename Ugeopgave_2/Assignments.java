@@ -1,4 +1,4 @@
-void main (){
+void main () {
     //Opgave 1: Shopping discount
     double totalPrice = 1500;
     double finalPrice;
@@ -19,7 +19,7 @@ void main (){
 
     System.out.println("BMI: " + bmi);
 
-    if (bmi >= 25){
+    if (bmi >= 25) {
         System.out.println("Overweight");
     } else if (bmi >= 18.5) {
         System.out.println("Normal weight");
@@ -30,11 +30,11 @@ void main (){
     //Opgave 3:
     int time = 14;
 
-    if (time >= 5 && time <= 11){
+    if (time >= 5 && time <= 11) {
         System.out.println("Good morning");
-    } else if (time >= 12 && time <= 17){
+    } else if (time >= 12 && time <= 17) {
         System.out.println("God afternoon");
-    } else if (time >= 18 && time <= 21){
+    } else if (time >= 18 && time <= 21) {
         System.out.println("God evening");
     } else {
         System.out.println("God night");
@@ -46,16 +46,16 @@ void main (){
     String status;
     String comment;
 
-    if (score >= 90){
+    if (score >= 90) {
         grade = "A";
         comment = "Excellent";
-    } else if (score >= 80 && score < 90){
+    } else if (score >= 80 && score < 90) {
         grade = "B";
         comment = "Good";
-    } else if (score >= 70 && score < 80){
+    } else if (score >= 70 && score < 80) {
         grade = "C";
         comment = "Satisfactory";
-    } else if (score >= 60 && score <70){
+    } else if (score >= 60 && score < 70) {
         grade = "D";
         comment = "Need improvement";
     } else {
@@ -63,7 +63,7 @@ void main (){
         comment = "Failing";
     }
 
-    if (score >= 60){
+    if (score >= 60) {
         status = "PASS";
     } else {
         status = "FAIL";
@@ -81,7 +81,7 @@ void main (){
     boolean isMember = true;
     double shippingCost;
 
-    if (totalPrice1 > 500 || isMember && totalPrice1 > 200){
+    if (totalPrice1 > 500 || isMember && totalPrice1 > 200) {
         shippingCost = 0;
         System.out.println("You will get free shipping!");
     } else {
@@ -95,23 +95,23 @@ void main (){
     System.out.println("Total: " + finalTotal + " kr.");
 
     //Opgave 6:
-    int agelimit= 15;
+    int agelimit = 15;
     int guestAge = 16;
     boolean hasParentalConsent = true;
 
-    if (guestAge >=15){
+    if (guestAge >= 15) {
         System.out.println("You can watch the movie");
-    } else if(hasParentalConsent && guestAge >13 && guestAge <= 14) {
+    } else if (hasParentalConsent && guestAge > 13 && guestAge <= 14) {
         System.out.println();
     } else {
         System.out.println("you are not old enogh");
     }
 
     //alternativt:
-    if (guestAge >= agelimit || hasParentalConsent && guestAge >= 13){
+    if (guestAge >= agelimit || hasParentalConsent && guestAge >= 13) {
         System.out.println("can watch movie");
     } else {
-        System.out.println("You are not old enough" );
+        System.out.println("You are not old enough");
     }
 
     //Opgave 7:
@@ -121,7 +121,7 @@ void main (){
     int waitTime = 20;
     boolean restaurantFull = false;
 
-    if (partySize <= availableSeats && waitTime <= 20 || hasReservation && !restaurantFull){
+    if (partySize <= availableSeats && waitTime <= 20 || hasReservation && !restaurantFull) {
         System.out.println("Table available");
         System.out.println("Estimated wait: " + waitTime + " minutes.");
     } else {
@@ -157,7 +157,7 @@ void main (){
 
     if (isAdmin && accountActive || isSuperUSer) {
         accessLevel = "Full access";
-    } else if ((isUser && accountActive && !suspended) || (isGuest && guestTimeValid)){
+    } else if ((isUser && accountActive && !suspended) || (isGuest && guestTimeValid)) {
         accessLevel = "Limited access";
     } else {
         accessLevel = "Access denied";
@@ -205,7 +205,7 @@ void main (){
     double price1;
     double addedCouts = 0.0;
 
-    switch (zone){
+    switch (zone) {
         case "local":
             price1 = 50.0;
             break;
@@ -221,14 +221,14 @@ void main (){
         default:
             price1 = 0.0;
             System.out.println("cost not found");
-        }
+    }
 
-        if(weight1 > 5.0){
-            double addedKg = weight1 - 5.0;
-            addedCouts = addedKg * 20.0;
-        }
+    if (weight1 > 5.0) {
+        double addedKg = weight1 - 5.0;
+        addedCouts = addedKg * 20.0;
+    }
 
-        double finalpricee = price1 + addedCouts;
+    double finalpricee = price1 + addedCouts;
 
     System.out.println("Zone: " + zone);
     System.out.println("Weight: " + weight1 + " kg");
@@ -284,13 +284,13 @@ void main (){
     double basePrice;
     double discount = 0.0;
 
-    switch (eventType){
+    switch (eventType) {
         case "movie":
             basePrice = 100;
             break;
         case "concert":
             basePrice = 250;
-            if (isStudent){
+            if (isStudent) {
                 discount = 0.20;
             }
             break;
@@ -299,7 +299,7 @@ void main (){
             break;
         case "theater":
             basePrice = 150;
-            if (isStudent){
+            if (isStudent) {
                 discount = 0.20;
             }
             break;
@@ -314,37 +314,37 @@ void main (){
     System.out.println("Event: " + eventType);
     System.out.println("Base price: " + basePrice + " kr");
 
-        if (discount > 0) {
+    if (discount > 0) {
         System.out.println("Student discount: " + (discount * 100) + "%");
-        }
+    }
 
     System.out.println("Price per ticket: " + pricePerTicket + " kr");
     System.out.println("Quantity: " + quantity);
     System.out.println("Total: " + total + " kr");
 
     //Opgave 14:
-    String item = "coffee";
+    String item1 = "coffee";
     String size = "large";
-    int quantity = 2;
-    double basePrice;
+    int quantity2 = 2;
+    double basePrice1;
     double sizeMultiplier = 1.0;
 
     // Get base price
-    switch (item) {
+    switch (item1) {
         case "coffee":
-            basePrice = 25.0;
+            basePrice1 = 25.0;
             break;
         case "tea":
-            basePrice = 20.0;
+            basePrice1 = 20.0;
             break;
         case "sandwich":
-            basePrice = 45.0;
+            basePrice1 = 45.0;
             break;
         case "cake":
-            basePrice = 35.0;
+            basePrice1 = 35.0;
             break;
         default:
-            basePrice = 0.0;
+            basePrice1 = 0.0;
             System.out.println("Invalid item");
     }
 
@@ -366,23 +366,132 @@ void main (){
     }
 
     double unitPrice = basePrice * sizeMultiplier;
-    double total = unitPrice * quantity;
+    double total1 = unitPrice * quantity2;
 
     System.out.println("=== ORDER ===");
-    System.out.println("Item: " + item);
-    if (item.equals("coffee") || item.equals("tea")) {
+    System.out.println("Item: " + item1);
+    if (item.equals("coffee") || item1.equals("tea")) {
         System.out.println("Size: " + size);
     }
-    System.out.println("Quantity: " + quantity);
+    System.out.println("Quantity: " + quantity2);
     System.out.println("Unit price: " + unitPrice + " kr");
-    System.out.println("Total: " + total + " kr");
+    System.out.println("Total: " + total1 + " kr");
     System.out.println("=============");
 
+    //Opgave 15:
+    double savings = 0.0;
+    double monthlyDeposit = 500;
+    double goal = 10000.0;
+    int months = 0;
 
+    while (savings < goal) {
+        savings += monthlyDeposit;
+        months++;
+    }
+    System.out.println("Months: " + months);
 
+    //Opgave 16: (ANDET OUTPUT)
+    double monthdeposit = 200.0;
+    double repaymentGoal = 5000.0;
+    int months1 = 0;
 
+    while (monthdeposit <= repaymentGoal) {
+        repaymentGoal -= monthdeposit;
+        months1++;
+    }
+    System.out.println("Months: " + months1);
 
+    //Opgave 17:
+    double celsius = 0.0;
+    double fahrenheit;
 
+    while (celsius <= 100) {
+        fahrenheit = celsius * 9.0 / 5.0 + 32;
+        System.out.println("Celsius: " + celsius + " = " + "Fahrenheit: " + fahrenheit);
+        celsius += 10;
+    }
+
+    //Opgave 18:
+    double principal = 10000.0;
+    int years = 0;
+
+    while (principal < 20000.0) {
+        principal *= 1.05;
+        years++;
+    }
+    System.out.println("Target reached in " + years + " years");
+
+    /*Opgave 19:
+    Scanner scan = new Scanner (System.in);
+    String password = "secret123";
+    int maxAttempt = 3;
+    int attempts = 0;
+    boolean correct = false;
+
+    while (attempts <= maxAttempt && !correct){
+        System.out.println("Indtast password: ");
+        String password1 = scan.nextLine();
+        attempts++;
+
+        if(password1.equals (password)){
+            correct = true;
+            System.out.println("Access granted");
+        } else {
+            System.out.println("Wrong password");
+        }
+    }
+    if(!correct){
+        System.out.println("Account locked");
+        }
+    */
+
+    //Opgave 20;
+    double monthsaving = 10000;
+    double finall = 0.0;
+
+    for (int month = 1; month <= 12; month++) {
+        finall += monthsaving;
+        System.out.println("Month: " + month + " = " + finall + "kr.");
+    }
+    System.out.println("Total after 12 month: " + finall + " kr.");
+
+    //Opgave 21:
+    int n = 1;
+    for (int i = 1; i <= 10; i++) {
+        System.out.println(n + " x " + i + " = " + (n * i));
+    }
+
+    //Opgave 22:
+    for (int i = 1; i <= 30; i++) {
+        if(i % 3 == 0 && i % 5 == 0){
+            System.out.println("Fizzbuzz");
+        } else if (i % 3 == 0){
+            System.out.println("Fizz");
+        } else if (i % 5 == 0){
+            System.out.println("Buzz");
+        } else {
+            System.out.println(i);
+        }
+    }
+
+    //Opgave 23:
+    int primtal = 29;
+    boolean isPrime = true;
+
+    for (int i = 2; i < primtal; i++){
+        if (primtal % i == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+
+    if (isPrime){
+        System.out.println(primtal + " is prime");
+    } else {
+        System.out.println(primtal + "is not prime");
+    }
+
+    //Opgave 24: Grade statistics
 
 
 }
